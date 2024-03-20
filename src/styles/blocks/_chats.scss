@@ -1,0 +1,71 @@
+.chats {
+    &__user {
+        cursor: pointer;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        border-radius: var(--border-radius);
+
+        @include tablet {
+            column-gap: 10px;
+        }
+
+        @include mobile {
+            justify-content: center;
+        }
+
+        @include mobile-s {
+            padding: 10px;
+        }
+
+        &-image {
+            @include square(50px);
+
+            border: var(--border);
+            border-radius: 50%;
+            object-fit: cover;
+
+            @include mobile-s {
+                @include square(40px);
+            }
+        }
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            row-gap: 5px;
+
+            @include mobile {
+                @include visually-hidden;
+            }
+        }
+
+        &-name {
+            font-size: 20px;
+            font-weight: 600;
+
+            @include tablet {
+                font-size: 16px;
+            }
+        }
+
+        &-message {
+            font-size: 15px;
+            color: var(--color-gray);
+            width: 100%;
+            max-width: 300px;
+            white-space: nowrap;
+            overflow: hidden;
+
+            @include tablet {
+                font-size: 12px;
+            }
+        }
+
+        @include hover {
+            background-color: var(--color-light-alt);
+            transition-duration: var(--transition-duration);
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.home {
+    width: 100vw;
+    height: 100dvh;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 30% 1fr;
+
+    @include mobile-s {
+        grid-template-columns: 20% 1fr;
+    }
+}

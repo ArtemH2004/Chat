@@ -1,0 +1,38 @@
+.register {
+    @include flex-center;
+
+    width: 100vw;
+    height: 100vh;
+    background: var(--gradient);
+
+    &__form {
+        @include flex-center;
+
+        flex-direction: column;
+        row-gap: 20px;
+
+        padding: 50px;
+        border-radius: var(--border-radius);
+        background-color: var(--color-light);
+        box-shadow: var(--box-shadow);
+
+        @include mobile {
+            row-gap: 15px;
+            padding: 40px 20px;
+        }
+    }
+
+    &__extra {
+        color: var(--color-gray);
+        font-size: 15px;
+        line-height: 1.4;
+
+        @include mobile {
+            font-size: 12px;
+        }
+    }
+
+    &__link {
+        color: var(--color-blue);
+    }
+}

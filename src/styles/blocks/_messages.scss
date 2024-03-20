@@ -1,0 +1,20 @@
+.messages {
+    width: 100%;
+    height: calc(100dvh - 85px * 2);
+    padding: 20px 30px;
+    overflow-y: scroll;
+
+    @include tablet {
+        height: calc(100dvh - 75px * 2);
+    }
+
+    @include mobile {
+        height: calc(100dvh - 145px);
+        padding: 15px 20px;
+    }
+
+    @include mobile-s {
+        height: calc(100dvh - 125px);
+        padding: 15px;
+    }
+}

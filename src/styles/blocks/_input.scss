@@ -1,0 +1,42 @@
+.input {
+    @include flex-center;
+    
+    width: 100%;
+    background-color: var(--color-light);
+    box-shadow: var(--box-shadow);
+
+
+    &__form {
+        width: 100%;
+        padding: 20px 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 10px;
+
+        @include tablet {
+            padding: 15px 20px;
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr 60% 1fr;
+        }
+
+        @include mobile-s {
+            padding: 10px 15px;
+        }
+    }
+
+    &__button {
+        margin-inline: auto 0;
+        position: relative;
+        &-icon {
+            @include square(32px);
+            @include abs-center;
+
+            @include tablet {
+                @include square(20px);
+            }
+        }
+    }
+}

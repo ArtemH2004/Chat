@@ -1,0 +1,49 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    box-shadow: var(--box-shadow);
+
+    @include mobile-s {
+        display: flex;
+        flex-direction: column-reverse;
+        row-gap: 10px;
+        padding: 10px;
+    }
+
+    &__user {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+
+        &-name {
+            font-size: 20px;
+            font-weight: 600;
+
+            @include tablet {
+                font-size: 16px;
+            }
+
+            @include mobile {
+                @include visually-hidden;
+            }
+        }
+
+        &-image {
+            @include square(40px);
+    
+            border: var(--border);
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+
+    &__quit {
+        @include square(30px);
+
+        @include tablet {
+            @include square(25px);
+        }
+    }
+}

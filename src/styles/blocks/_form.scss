@@ -1,0 +1,82 @@
+.form {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    @include mobile {
+        font-size: 16px;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 10px 20px;
+        border-radius: var(--border-radius);
+        border: var(--border);
+
+        &:focus {
+            outline: none;
+            background-color: var(--color-blue-alt);
+        }
+
+        &-file {
+            display: flex;
+            align-items: center;
+            margin-inline: 0 auto;
+            column-gap: 10px;
+            color: var(--color-blue-alt);
+        }
+
+        &-image {
+            @include square(35px);
+            @include flex-center;
+
+            margin-inline: auto;
+
+            @include hover {
+                transform: scale(0.95);
+                transition-duration: var(--transition-duration)
+            }
+
+            @include tablet {
+                @include square(25px);
+            }
+        }
+    }
+
+    &__search {
+        &-icon {
+            @include square(20px);
+        }
+
+        &-input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: inherit;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    &__message {
+        &-input {
+            width: 100%;
+            border: none;
+            padding: 10px;
+            border-radius: inherit;
+            font-size: 20px;
+
+            @include mobile {
+                padding: 5px 10px;
+                font-size: 16px;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@import 
+ 'normalize',
+ 'fonts',
+ 'mixins', 
+ 'media',
+ 'variables', 
+ 'utils', 
+ 'globals';
+
+@import
+'./blocks/button',
+'./blocks/form',
+'./blocks/register',
+'./blocks/home',
+'./blocks/sidebar',
+'./blocks/chats',
+'./blocks/chat',
+'./blocks/navbar',
+'./blocks/search',
+'./blocks/message',
+'./blocks/messages',
+'./blocks/input';

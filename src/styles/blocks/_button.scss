@@ -1,0 +1,57 @@
+.button {
+    @include reset-button;
+    @include flex-center;
+
+    @include hover {
+        transform: scale(0.95);
+    }
+
+    &-icon {
+        padding: 10px;
+        border-radius: 50%;
+
+        @include hover {
+            background-color: var(--color-light-alt);
+
+            &:active {
+                background-color: var(--color-gray);
+            }
+        }
+    }
+
+    &-registration {
+        padding: 15px 25px;
+        position: relative;
+
+        text-transform: uppercase;
+        font-size: 18px;
+        letter-spacing: 2px;
+        color: var(--color-light);
+        background-color: var(--color-blue);
+        border-radius: var(--border-radius);
+
+        @include mobile {
+            font-size: 15px;
+            padding: 12px 20px;
+        }
+
+        @include hover {
+            filter: brightness(0.9);
+            
+            &:active {
+                filter: brightness(0.8);
+            }
+        }
+    }
+
+    &-send {
+        @include flex-center;
+        @include square(40px);
+
+        border-radius: 50%;
+
+        @include tablet {
+            @include square(30px);
+        }
+    }
+}

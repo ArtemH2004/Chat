@@ -1,0 +1,40 @@
+.chat {
+    width: 100%;
+    height: 100%;
+    background: var(--gradient);
+
+    &__header {
+        width: 100%;
+        padding: 15px 25px;
+        background-color: var(--color-light);
+        box-shadow: var(--box-shadow);
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 50px;
+
+        @include mobile-s {
+            padding: 10px 15px;
+        }
+    }
+
+    &__username {
+        font-size: 25px;
+        font-weight: 600;
+
+        @include mobile {
+            font-size: 20px;
+        }
+    }
+
+    &__more {
+        @include square(30px);
+
+        border-radius: 50%;
+
+        @include tablet {
+            @include square(25px);
+        }
+    }
+}

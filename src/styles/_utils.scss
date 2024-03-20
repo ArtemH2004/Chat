@@ -1,0 +1,19 @@
+.visually-hidden {
+    @include visually-hidden;
+}
+
+.error,
+.load {
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.4;
+
+    @include mobile {
+        font-size: 12px;
+    }
+}
+
+.error {
+    color: var(--color-red);
+}
+
